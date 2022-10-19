@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KM2-87-S7n">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="22E-U1-jxX">
+            <objects>
+                <tabBarController id="KM2-87-S7n" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QV7-6H-FwE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="N24-60-hQs" kind="relationship" relationship="viewControllers" id="Y23-ti-INB"/>
+                        <segue destination="77i-s1-gaK" kind="relationship" relationship="viewControllers" id="cqX-Jz-prP"/>
+                        <segue destination="3SL-Q9-0oY" kind="relationship" relationship="viewControllers" id="Ubc-db-CEz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osL-Xm-vPm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-322" y="871"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="iLz-fe-7hW">
+            <objects>
+                <viewController id="77i-s1-gaK" customClass="SecondViewController" customModule="Homework_6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eNU-jg-e5h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bw0-Lg-2Ml">
+                                <rect key="frame" x="169.5" y="427" width="75" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="bRJ-8A-q0w"/>
+                                    <constraint firstAttribute="width" constant="75" id="xCc-yU-OQt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Run!">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressedButton:" destination="77i-s1-gaK" eventType="touchUpInside" id="LH4-H1-7Y2"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCB-PO-DhH">
+                                <rect key="frame" x="12" y="60" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2ao-NQ-7Z1"/>
+                                    <constraint firstAttribute="width" constant="40" id="few-gZ-wrF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W2y-Cx-qkY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WCB-PO-DhH" firstAttribute="top" secondItem="W2y-Cx-qkY" secondAttribute="top" constant="12" id="0RT-lb-Jjd"/>
+                            <constraint firstItem="WCB-PO-DhH" firstAttribute="leading" secondItem="W2y-Cx-qkY" secondAttribute="leading" constant="12" id="1mF-FE-LPo"/>
+                            <constraint firstItem="bw0-Lg-2Ml" firstAttribute="centerX" secondItem="eNU-jg-e5h" secondAttribute="centerX" id="8uM-up-0FS"/>
+                            <constraint firstItem="bw0-Lg-2Ml" firstAttribute="centerY" secondItem="eNU-jg-e5h" secondAttribute="centerY" id="KqD-WU-Mji"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" id="Ifd-TY-HeV"/>
+                    <connections>
+                        <outlet property="button" destination="bw0-Lg-2Ml" id="BNN-l7-njD"/>
+                        <outlet property="circle" destination="WCB-PO-DhH" id="piR-rb-cfm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zE-1d-dK1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="871"/>
+        </scene>
+        <!--Third-->
+        <scene sceneID="o7W-1O-YBV">
+            <objects>
+                <viewController id="3SL-Q9-0oY" customClass="ThirdViewController" customModule="Homework_6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2mv-Y6-LXf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgY-N4-QQa">
+                                <rect key="frame" x="149.5" y="148" width="115" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="9LW-a9-gi0"/>
+                                    <constraint firstAttribute="height" constant="50" id="ohg-wd-Uxe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Whistle!">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="baseBackgroundColor" red="0.74509805439999999" green="0.89803922179999995" blue="0.98823523520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressedButton:" destination="3SL-Q9-0oY" eventType="touchUpInside" id="mQG-4E-dnd"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="par-c3-vDU" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8AI-3b-kZy"/>
+                                    <constraint firstAttribute="height" constant="240" id="sPS-o5-iV9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="koala"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wud-EY-jPb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="par-c3-vDU" firstAttribute="centerY" secondItem="2mv-Y6-LXf" secondAttribute="centerY" id="3sg-mC-GyT"/>
+                            <constraint firstItem="WgY-N4-QQa" firstAttribute="top" secondItem="Wud-EY-jPb" secondAttribute="top" constant="100" id="dpi-yb-jrf"/>
+                            <constraint firstItem="par-c3-vDU" firstAttribute="centerX" secondItem="2mv-Y6-LXf" secondAttribute="centerX" id="htW-hP-3Sa"/>
+                            <constraint firstItem="WgY-N4-QQa" firstAttribute="centerX" secondItem="2mv-Y6-LXf" secondAttribute="centerX" id="pfk-RK-6h2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Third" id="Hig-7f-VJ8"/>
+                    <connections>
+                        <outlet property="koalaView" destination="par-c3-vDU" id="8QY-Vh-WW9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xW-cN-1Ex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="1590"/>
+        </scene>
+        <!--First-->
+        <scene sceneID="yZ8-xH-Ob1">
+            <objects>
+                <viewController id="N24-60-hQs" customClass="FirstViewController" customModule="Homework_6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tdq-gu-XmD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nS-aR-eUV">
+                                <rect key="frame" x="147" y="663" width="120" height="120"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="QIK-gi-1s5"/>
+                                    <constraint firstAttribute="width" constant="120" id="Wg2-07-ghS"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvw-oW-Wi1">
+                                <rect key="frame" x="140" y="124" width="134.5" height="48.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Bounce!">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="N24-60-hQs" eventType="touchUpInside" id="Qhx-TB-AJ2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YGk-yp-PmS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YGk-yp-PmS" firstAttribute="bottom" secondItem="3nS-aR-eUV" secondAttribute="bottom" constant="30" id="gIY-id-K58"/>
+                            <constraint firstItem="3nS-aR-eUV" firstAttribute="centerX" secondItem="Tdq-gu-XmD" secondAttribute="centerX" id="krF-6b-LW0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" id="SGB-nL-hBY"/>
+                    <connections>
+                        <outlet property="ball" destination="3nS-aR-eUV" id="T0C-nQ-95p"/>
+                        <outlet property="button" destination="cvw-oW-Wi1" id="u0v-Hs-iPb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhd-9d-bcG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="226"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="par-c3-vDU"/>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
