@@ -1,0 +1,6 @@
+target 'Homework 8' do
+  
+pod 'Alamofire'
+pod 'SDWebImage', :modular_headers => true
+
+end

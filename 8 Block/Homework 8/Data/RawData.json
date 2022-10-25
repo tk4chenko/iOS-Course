@@ -1,0 +1,43 @@
+{
+        "count": 2,
+        "companyDescription": "The best company of the galaxy.",
+        "listOfData": [
+         {
+            "name": "iPhone",
+            "modelNumber": "XR",
+            "countries": ["usa", "uk" ],
+            "price": {
+                "regions": [
+                {
+                    "name": "firstRegion",
+                    "price": 800
+                },
+                {
+                    "name": "secondRegion",
+                    "price": 900
+                }
+                ]
+            },
+            "year": 2018
+        },
+         {
+            "name": "iPhone",
+            "modelNumber": "11",
+            "countries": ["usa", "uk" ],
+            "price": {
+                "regions": [
+                {
+                    "name": "thirdRegion",
+                    "price": 900
+                },
+                {
+                    "name": "fourthRegion",
+                    "price": 950
+                }
+                ]
+            },
+            "year": 2019
+        }
+         ]
+    
+}

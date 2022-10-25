@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2j1-L9-4m8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--The MovieDb-->
+        <scene sceneID="uYz-da-8VV">
+            <objects>
+                <viewController storyboardIdentifier="MovieAreTrendingViewController" id="cov-Tm-24h" customClass="MovieAreTrendingViewController" customModule="Homework_8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SpY-V3-ThP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZFL-4s-Ud3">
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cov-Tm-24h" id="Rb0-xc-met"/>
+                                    <outlet property="delegate" destination="cov-Tm-24h" id="HmO-GE-cH6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C9l-Qn-Lwm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZFL-4s-Ud3" firstAttribute="leading" secondItem="C9l-Qn-Lwm" secondAttribute="leading" id="3xr-rc-toX"/>
+                            <constraint firstAttribute="bottom" secondItem="ZFL-4s-Ud3" secondAttribute="bottom" id="7Mc-1M-chm"/>
+                            <constraint firstItem="ZFL-4s-Ud3" firstAttribute="top" secondItem="C9l-Qn-Lwm" secondAttribute="top" id="C5e-ug-vgU"/>
+                            <constraint firstItem="ZFL-4s-Ud3" firstAttribute="trailing" secondItem="C9l-Qn-Lwm" secondAttribute="trailing" id="Y9D-Na-CJ7"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Movies" image="tv" catalog="system" id="ASN-sn-Rcp"/>
+                    <navigationItem key="navigationItem" title="The MovieDb" id="o5f-Cy-JC0"/>
+                    <connections>
+                        <outlet property="moviesTableView" destination="ZFL-4s-Ud3" id="Zb0-X6-0r5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjq-CS-pS8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1267" y="-11"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Homework_8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="cH1-zE-XhY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="754"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="AdF-KF-Ghi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MYW-A3-QoK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="3GY-LV-2Ri"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="bfh-ip-cAf">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cov-Tm-24h" kind="relationship" relationship="rootViewController" id="K4m-P4-TBq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kNb-bV-Fr7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="-25"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wb0-qt-UOz">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2j1-L9-4m8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="neU-ea-dSf"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qvv-3V-15c">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MYW-A3-QoK" kind="relationship" relationship="viewControllers" id="gs7-eU-293"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="d5L-zw-A4y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GtZ-Ja-lxq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="tv" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
