@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bbo-4a-tWo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kLy-xj-fkv">
+            <objects>
+                <navigationController id="bbo-4a-tWo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="sjy-eP-DVc">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rtP-mE-G5I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCM-VP-nw9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-761" y="66"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Homework_9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d6Y-XH-7zK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d6Y-XH-7zK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WN9-fk-7UA"/>
+                            <constraint firstItem="d6Y-XH-7zK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bkq-r7-at6"/>
+                            <constraint firstAttribute="bottom" secondItem="d6Y-XH-7zK" secondAttribute="bottom" id="c7y-wH-VvS"/>
+                            <constraint firstItem="d6Y-XH-7zK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uLL-s2-oPV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BMg-lw-oba"/>
+                    <connections>
+                        <outlet property="tableView" destination="d6Y-XH-7zK" id="PFg-X1-LbB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lOP-ty-gV6">
+            <objects>
+                <viewController id="yEP-qy-PIB" customClass="TMDBViewController" customModule="Homework_9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uMg-3j-GkT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Rm-kt-GIO">
+                                <rect key="frame" x="0.0" y="48" width="414" height="848"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ex3-wm-pL0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7Rm-kt-GIO" secondAttribute="bottom" id="Ix0-Zp-Pdx"/>
+                            <constraint firstItem="7Rm-kt-GIO" firstAttribute="trailing" secondItem="ex3-wm-pL0" secondAttribute="trailing" id="QcA-w9-2iw"/>
+                            <constraint firstItem="7Rm-kt-GIO" firstAttribute="leading" secondItem="ex3-wm-pL0" secondAttribute="leading" id="rzX-9V-4wr"/>
+                            <constraint firstItem="7Rm-kt-GIO" firstAttribute="top" secondItem="ex3-wm-pL0" secondAttribute="top" id="xNx-jr-LA2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableVIew" destination="7Rm-kt-GIO" id="bpe-0M-See"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hH1-wa-SFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.86956521739137" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
