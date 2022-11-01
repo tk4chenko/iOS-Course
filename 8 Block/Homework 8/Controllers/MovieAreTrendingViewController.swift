@@ -14,14 +14,21 @@ class MovieAreTrendingViewController: UIViewController {
     
     var viewModel = ViewModelMainVC()
     
+    var currentPage = 1
+    let totalPages = 10
+    var movies = [Result]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let nib = UINib(nibName: "TMDbTableViewCell", bundle: nil)
         self.moviesTableView.register(nib, forCellReuseIdentifier: "TMDbTableViewCell")
-        viewModel.loadingTrendingMovies {
+        
+        viewModel.loadingTrendingMovies(page: currentPage) { movie in
+            self.movies = movie
             self.moviesTableView.reloadData()
         }
+        
         viewModel.loadingGenres {
             self.moviesTableView.reloadData()
         }
@@ -30,10 +37,22 @@ class MovieAreTrendingViewController: UIViewController {
     
 }
 
-extension MovieAreTrendingViewController: UITableViewDataSource {
+extension MovieAreTrendingViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if currentPage < totalPages && indexPath.row == movies.count - 1 {
+            currentPage += 1
+            viewModel.loadingTrendingMovies(page: currentPage) { movies in
+                self.movies.append(contentsOf: movies)
+                DispatchQueue.main.async {
+                    self.moviesTableView.reloadData()
+                }
+            }
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.viewModel.arrayOfMovies.count
+        self.movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,10 +60,10 @@ extension MovieAreTrendingViewController: UITableViewDataSource {
         
         var genreOfMovie = ""
         
-        for id in viewModel.arrayOfMovies[indexPath.row].genreIDS {
+        for id in movies[indexPath.row].genreIDS {
             for genre in viewModel.arrayOfGenres {
                 if id == genre.id {
-                    if id == viewModel.arrayOfMovies[indexPath.row].genreIDS.last {
+                    if id == movies[indexPath.row].genreIDS.last {
                         genreOfMovie += genre.name + " "
                     } else {
                     genreOfMovie += genre.name + ", "
@@ -54,7 +73,7 @@ extension MovieAreTrendingViewController: UITableViewDataSource {
         }
         
         cell.genreLabel.text = genreOfMovie
-        cell.configure(movie: viewModel.arrayOfMovies[indexPath.row])
+        cell.configure(movie: movies[indexPath.row])
         return cell
     }
 }
