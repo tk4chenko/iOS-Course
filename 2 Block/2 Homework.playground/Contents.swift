@@ -60,13 +60,14 @@ class TitanicSailor: Sailor {
     }
 }
 
-//let sailor1 = TitanicSailor(n: "Jack Sparrow")
-//let sailor2 = TitanicSailor(n: "Hector Barbossa")
-//let sailor3 = TitanicSailor(n: "Will Turner")
-//let sailor4 = TitanicSailor(n: "Elizabeth Swann")
-//let sailor5 = TitanicSailor(n: "Joshamee Gibbs")
-//let sailors = Titanic(n: "The Black Pearl", s: [sailor1, sailor2, sailor3, sailor4, sailor5])
-//sailors.introduceAll()
+let sailor1 = TitanicSailor(n: "Jack Sparrow")
+let sailor2 = TitanicSailor(n: "Hector Barbossa")
+let sailor3 = TitanicSailor(n: "Will Turner")
+let sailor4 = TitanicSailor(n: "Elizabeth Swann")
+let sailor5 = TitanicSailor(n: "Joshamee Gibbs")
+let titanic = Titanic(
+let sailors = Titanic(n: "The Black Pearl", s: [sailor1, sailor2, sailor3, sailor4, sailor5])
+sailors.introduceAll()
 
 // Task 5:
 
