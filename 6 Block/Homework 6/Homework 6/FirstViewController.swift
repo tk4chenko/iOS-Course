@@ -15,10 +15,14 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .orange
+    
         ball.layer.cornerRadius = 60
         button.center.x = view.center.x
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        ball.frame = CGRect(x: view.frame.midX - ball.frame.width / 2, y: view.frame.maxY - 220, width: 120, height: 120)
     }
     
     @IBAction func buttonPressed(_ sender: Any) {

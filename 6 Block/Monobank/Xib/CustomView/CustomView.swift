@@ -58,9 +58,8 @@ class CustomView: UIView {
     }
     
     @IBAction func viewPressed(_ sender: Any) {
-        if let mainItem = self.item {
-            delegate?.customViewPressed(item: mainItem)
-        }
+        guard let mainItem = self.item else { return }
+        delegate?.customViewPressed(item: mainItem)
     }
 }
 

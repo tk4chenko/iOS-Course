@@ -13,7 +13,6 @@ class ViewModelMainVC {
     var arrayOfMovies: [Result] = []
     var arrayOfGenres: [Genre] = []
     
-    
     func loadingTrendingMovies(page: Int, completion: @escaping([Result])->()) {
         let movieRequest = AF.request("https://api.themoviedb.org/3/discover/movie?api_key=b3187cf196a7681dee8805cdcec0d6ba&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=\(page)&with_genres=878&with_watch_monetization_types=flatrate", method: .get)
         
